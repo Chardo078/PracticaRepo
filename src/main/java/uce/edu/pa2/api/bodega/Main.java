@@ -25,11 +25,11 @@ public class Main {
         public int run(String... args) {
             // --- SERVICE LOCATOR LOOKUP ---
             // Buscamos la instancia manualmente en el contenedor
-            PedidoService1 pedidoService1 = CDI.current()
+          PedidoService1 pedidoService1 = CDI.current()
                     .select(PedidoService1.class)
                     .get();
  
-            System.out.println("Ejecutando Caso 1 (vía Lookup)...");
+           // System.out.println("Ejecutando Caso 1 (vía Lookup)...");
             Pedido pedido = new Pedido("Deyvi Pilataxi", "Libro", 3, "ragonzaga@uce.edu.ec");
             pedidoService1.registrar(pedido);
             
